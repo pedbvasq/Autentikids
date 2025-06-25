@@ -1,0 +1,53 @@
+# Node.js
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+venv/
+.env
+
+# Java / Maven / Gradle
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+.gradle/
+build/
+out/
+
+# VSCode/JetBrains/IDE config
+.vscode/
+.idea/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Entornos virtuales
+env/
+venv/
+ENV/
+.venv/
+
+# Archivos temporales
+*.tmp
+*.swp
+*.bak
+
+# Configuración personal
+*.local
+*.env
+
+# Otros gestores de paquetes
+bower_components/
