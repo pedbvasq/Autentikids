@@ -64,20 +64,24 @@ export const HeroSection = () => {
         <div className="text-center space-y-8 px-4">
           <div className="max-w-screen-md mx-auto text-4xl md:text-6xl font-bold">
             <h1>
-              Alianza para tu bienestar:
+              AutentiKids:
               <span className="text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
-                creciendo juntos hacia una vida plena.
+                Comprender su mundo es fortalecer su camino y bienestar.
               </span>
             </h1>
           </div>
 
+
+      <p className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
+Somos un Centro Terapéutico Integral que ofrece un espacio seguro, confidencial y personalizado para el bienestar emocional de niños, adolescentes y adultos, con terapias actualizadas y basadas en evidencia científica
+      </p>
           <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground">
             Agenda tu cita hoy y comienza tu camino hacia el bienestar emocional con el apoyo que necesitas.
           </p>
 
           <div className="space-y-4 md:space-y-0 md:space-x-4">
             <Button className="w-5/6 md:w-1/4 font-bold group/arrow">
-              Get Started
+               Conversemos
               <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
             </Button>
 
@@ -87,15 +91,17 @@ export const HeroSection = () => {
               className="w-5/6 md:w-1/4 font-bold"
             >
               <Link
-                href="https://github.com/nobruf/shadcn-landing-page.git"
+                href={`https://wa.me/1234566`}
                 target="_blank"
               >
-                Github repository
+              Agenda tu cita
               </Link>
             </Button>
           </div>
         </div>
       </div>
+
+
     </section>
   );
 };

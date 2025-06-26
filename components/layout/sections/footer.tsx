@@ -9,23 +9,27 @@ export const FooterSection = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
           <div className="col-span-full xl:col-span-2">
             <Link href="#" className="flex font-bold items-center">
-              <ChevronsDownIcon className="w-9 h-9 mr-2 bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg border border-secondary" />
+                <img
+    src="/logo_autentikids.png"
+    alt="AutentiKids Logo"
+    className="w-9 h-9 mr-2 rounded-lg border border-secondary object-contain"
+  />
 
-              <h3 className="text-2xl">Shadcn</h3>
+              <h3 className="text-2xl">AutentiKids</h3>
             </Link>
           </div>
 
           <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-lg">Contact</h3>
+            <h3 className="font-bold text-lg">Contactos</h3>
             <div>
               <Link href="#" className="opacity-60 hover:opacity-100">
-                Github
+                autentikids@ddasda
               </Link>
             </div>
 
             <div>
               <Link href="#" className="opacity-60 hover:opacity-100">
-                Twitter
+                +73736463
               </Link>
             </div>
 
@@ -37,10 +41,10 @@ export const FooterSection = () => {
           </div>
 
           <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-lg">Platforms</h3>
+            <h3 className="font-bold text-lg">Ubicacion</h3>
             <div>
               <Link href="#" className="opacity-60 hover:opacity-100">
-                iOS
+                Ubicacion
               </Link>
             </div>
 
@@ -58,28 +62,24 @@ export const FooterSection = () => {
           </div>
 
           <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-lg">Help</h3>
+            <h3 className="font-bold text-lg">Horarios</h3>
             <div>
               <Link href="#" className="opacity-60 hover:opacity-100">
-                Contact Us
+               Lunes a viernes 08h00 a 17h00 
               </Link>
             </div>
 
             <div>
               <Link href="#" className="opacity-60 hover:opacity-100">
-                FAQ
+              Sábados y domingo 09h00 a 14h00 
               </Link>
             </div>
 
-            <div>
-              <Link href="#" className="opacity-60 hover:opacity-100">
-                Feedback
-              </Link>
-            </div>
+  
           </div>
 
           <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-lg">Socials</h3>
+            <h3 className="font-bold text-lg">Redes sociales</h3>
             <div>
               <Link href="#" className="opacity-60 hover:opacity-100">
                 Twitch
@@ -103,7 +103,7 @@ export const FooterSection = () => {
         <Separator className="my-6" />
         <section className="">
           <h3 className="">
-            &copy; 2024 Designed and developed by
+            &copy; Desarrollado por 
             <Link
               target="_blank"
               href=""

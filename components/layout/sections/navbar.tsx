@@ -8,8 +8,8 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "../ui/sheet";
-import { Separator } from "../ui/separator";
+} from "../../ui/sheet";
+import { Separator } from "../../ui/separator";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -17,11 +17,11 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "../ui/navigation-menu";
-import { Button } from "../ui/button";
+} from "../../ui/navigation-menu";
+import { Button } from "../../ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { ToggleTheme } from "./toogle-theme";
+import { ToggleTheme } from "../toogle-theme";
 
 interface RouteProps {
   href: string;
@@ -32,20 +32,21 @@ interface RouteProps {
 const routeList: RouteProps[] = [
   {
     href: "#testimonials",
-    label: "Testimonials",
+    label: "Home",
   },
   {
     href: "#team",
     label: "Equipo",
   },
+    {
+    href: "#features",
+    label: "Servicios",
+  },
   {
     href: "#contact",
     label: "Contactanos",
   },
-  {
-    href: "#faq",
-    label: "FAQ",
-  },
+
 ];
 
 
@@ -81,13 +82,13 @@ export const Navbar = () => {
               <SheetHeader className="mb-4 ml-4">
                 <SheetTitle className="flex items-center">
                   <Link href="/" className="flex items-center">
-                    <ChevronsDown className="bg-gradient-to-tr border-secondary from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white" />
-                    Alianza terapéutica 
+                    <ChevronsDown className="bg-gradient-to-tr border-secondary from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white text-[hsl(var(--primary))]" />
+                   AutentiKids
                   </Link>
                 </SheetTitle>
               </SheetHeader>
 
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 text-[hsl(var(--primary))]">
                 {routeList.map(({ href, label }) => (
                   <Button
                     key={href}
@@ -102,7 +103,7 @@ export const Navbar = () => {
               </div>
             </div>
 
-            <SheetFooter className="flex-col sm:flex-col justify-start items-start">
+            <SheetFooter className="flex-col sm:flex-col justify-start items-start text-[hsl(var(--primary))]">
               <Separator className="mb-2" />
 
               <ToggleTheme />
@@ -133,7 +134,7 @@ export const Navbar = () => {
           <NavigationMenuItem>
             {routeList.map(({ href, label }) => (
               <NavigationMenuLink key={href} asChild>
-                <Link href={href} className="text-base px-2">
+                <Link href={href} className="text-base px-2 text-[hsl(var(--primary))] hover:text-yellow-400  hover:text-lg duration-300 ease-in-out">
                   {label}
                 </Link>
               </NavigationMenuLink>

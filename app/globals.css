@@ -85,17 +85,20 @@ html {
     --popover: 0 0% 100%;
     --popover-foreground: 20 14.3% 4.1%;
 
-   --primary:200 50% 69%;
-    --primary-foreground: 60 9.1% 97.8%;
+    --primary: 265 25% 52%;               /* Morado "Autenti" */
+    --primary-foreground: 60 9.1% 97.8%;  /* Texto claro sobre fondo primary */
 
-    --secondary: 60 4.8% 95.9%;
-    --secondary-foreground: 24 9.8% 10%;
+    --secondary: 200 60% 60%;             /* Azul de la "K" */
+    --secondary-foreground: 24 9.8% 10%;  /* Texto oscuro sobre fondo secondary */
 
+    --accent-1: 38 85% 55%;               /* Naranja de la "i" */
+    --accent-2: 340 70% 70%;              /* Rosado "d" */
+    --accent-3: 50 90% 65%;               /* Amarillo "s" */
+    --accent-4: 45 90% 60%;               /* Amarillo Sol */
+    --accent-light: 340 70% 80%;          /* Rosado claro "Centro terapéutico integral" */
     --muted: 60 4.8% 95.9%;
     --muted-foreground: 25 5.3% 44.7%;
 
-    --accent: 60 4.8% 95.9%;
-    --accent-foreground: 24 9.8% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 60 9.1% 97.8%;

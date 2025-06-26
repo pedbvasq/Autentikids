@@ -10,42 +10,49 @@ interface FeaturesProps {
 
 const featureList: FeaturesProps[] = [
   {
-    icon: "Brain",
-    title: "Psicoeducación y prevención emocional",
+    icon: "Baby",
+    title: "Estimulación Temprana",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, consectetur.",
+      "Potenciamos el desarrollo integral de los más pequeños a través de actividades lúdicas y educativas.",
   },
   {
-    icon: "ClipboardCheck",
-    title: " Evaluación y orientación psicológica",
+    icon: "UserRoundCog",
+    title: "Psicología Clínica niños, adolescentes y adultos",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Natus consectetur, odio ea accusamus aperiam.",
-  },
-  {
-    icon: "Home",
-    title: "Terapia cognitivo-conductual (TCC)",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. odio ea accusamus aperiam.",
-  },
-  {
-    icon: "User",
-    title: "Terapia individual para jóvenes y adultos",
-    description:
-      "Lorem elit. A odio velit cum aliquam. Natus consectetur dolores, odio ea accusamus aperiam.",
+      "Evaluación, diagnóstico y acompañamiento psicológico para todas las etapas de la vida.",
   },
   {
     icon: "Users",
-    title: " Orientación psicológica para todas las edades",
+    title: "Orientación Familiar",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing. odio ea accusamus consectetur.",
+      "Apoyo y estrategias para fortalecer los vínculos y la comunicación dentro del núcleo familiar.",
   },
   {
-    icon: "BarChart",
-    title: " Evaluación psicológica y psicopedagógica",
+    icon: "BookOpen",
+    title: "Psicopedagogía",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur.",
+      "Intervención y acompañamiento en procesos de aprendizaje para mejorar el rendimiento académico.",
+  },
+  {
+    icon: "ClipboardList",
+    title: "Control de tareas y Seguimiento Escolar",
+    description:
+      "Supervisión académica personalizada para reforzar hábitos de estudio y organización escolar.",
+  },
+  {
+    icon: "Layers",
+    title: "Terapias Integrales",
+    description:
+      "Enfoque multidisciplinario para el bienestar emocional, cognitivo y conductual.",
+  },
+  {
+    icon: "BrainCircuit",
+    title: "Intervención Temprana en trastornos del Neurodesarrollo",
+    description:
+      "Detección y abordaje oportuno de dificultades del desarrollo para maximizar el potencial individual.",
   },
 ];
+
 
 export const FeaturesSection = () => {
   return (
@@ -62,30 +69,36 @@ export const FeaturesSection = () => {
       Ofrecemos servicios psicológicos diseñados para promover el bienestar emocional y el desarrollo personal en todas las etapas de la vida. Desde la psicoeducación y la orientación individual hasta la terapia familiar y la evaluación psicopedagógica, nuestro enfoque profesional busca brindar apoyo efectivo y personalizado.
       </h3>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {featureList.map(({ icon, title, description }) => (
-          <div key={title}>
-            <Card className="h-full bg-background border-0 shadow-none">
-              <CardHeader className="flex justify-center items-center">
-                <div className="bg-primary/20 p-2 rounded-full ring-8 ring-primary/10 mb-4">
-                  <Icon
-                    name={icon as keyof typeof icons}
-                    size={24}
-                    color="hsl(var(--primary))"
-                    className="text-primary"
-                  />
-                </div>
+<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
+    {featureList.map(({ icon, title, description }, index) => (
+      <div
+        key={title}
+        className={`w-full flex justify-center ${
+          featureList.length % 3 === 1 && index === featureList.length - 1
+            ? "lg:col-span-3"
+            : ""
+        }`}
+      >
+        <Card className="h-full bg-background border-0 shadow-none w-full max-w-[300px]">
+          <CardHeader className="flex flex-col justify-center items-center text-center">
+            <div className="bg-primary/20 p-2 rounded-full ring-8 ring-primary/10 mb-4">
+              <Icon
+                name={icon as keyof typeof icons}
+                size={24}
+                color="hsl(var(--primary))"
+                className="text-primary"
+              />
+            </div>
+            <CardTitle className="text-center">{title}</CardTitle>
+          </CardHeader>
 
-                <CardTitle>{title}</CardTitle>
-              </CardHeader>
-
-              <CardContent className="text-muted-foreground text-center">
-                {description}
-              </CardContent>
-            </Card>
-          </div>
-        ))}
+          <CardContent className="text-muted-foreground text-center">
+            {description}
+          </CardContent>
+        </Card>
       </div>
+    ))}
+  </div>
     </section>
   );
 };

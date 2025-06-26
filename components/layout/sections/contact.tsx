@@ -123,6 +123,18 @@ export const ContactSection = () => {
               </div>
             </div>
           </div>
+            {/* Mapa de Google */}
+  <div className="w-full h-[200px] rounded overflow-hidden shadow-lg">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.8475076791036!2d-89.65014878462268!3d39.78172157944444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x887524b3c618f39d%3A0xe5532c378e8c4c7f!2s742%20Evergreen%20Terrace%2C%20Springfield%2C%20IL%2062704%2C%20EE.%20UU.!5e0!3m2!1ses!2sec!4v1719433038242!5m2!1ses!2sec"
+      width="100%"
+      height="100%"
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      className="w-full h-full border-0"
+    ></iframe>
+  </div>
         </div>
 
         {/* Formulario */}
