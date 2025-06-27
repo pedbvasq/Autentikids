@@ -17,7 +17,7 @@ export const metadata = {
   title: "AutentiKids",
   description: "Free Shadcn landing page for developers",
   icons: {
-    icon: "/logo_autentikids.ico",  // Ruta desde la carpeta public
+    icon: "/favicon.ico",  // Ruta desde la carpeta public
   },
 
 };
@@ -27,7 +27,7 @@ export default function Home() {
     <>
         <Head>
         <title>AutentiKids</title>
-        <link rel="icon" href="/logo_autentikids.u" />
+        <link rel="icon" href="/logo_autentikids.png" />
       </Head>
       <HeroSection />
       <FeaturesSection />
