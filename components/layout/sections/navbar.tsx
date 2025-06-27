@@ -82,7 +82,11 @@ export const Navbar = () => {
               <SheetHeader className="mb-4 ml-4">
                 <SheetTitle className="flex items-center">
                   <Link href="/" className="flex items-center">
-                    <ChevronsDown className="bg-gradient-to-tr border-secondary from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white text-[hsl(var(--primary))]" />
+                                   <img
+    src="/logo_autentikids.png"
+    alt="AutentiKids Logo"
+    className="w-9 h-9 mr-2 rounded-lg border border-secondary object-contain"
+  />
                    AutentiKids
                   </Link>
                 </SheetTitle>

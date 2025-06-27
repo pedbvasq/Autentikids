@@ -3,6 +3,7 @@ import GithubIcon from "@/components/icons/github-icon";
 import React, { useState } from "react";
 import LinkedInIcon from "@/components/icons/linkedin-icon";
 import XIcon from "@/components/icons/x-icon";
+import { useEffect } from "react";
 import {
   Card,
   CardContent,
@@ -31,41 +32,57 @@ interface ModalProps {
   onClose: () => void;
 }
 const Modal = ({ user, onClose }: { user: TeamProps | null; onClose: () => void }) => {
+  // Bloquear scroll en el body mientras el modal está abierto
+  useEffect(() => {
+    document.body.style.overflow = user ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [user]);
+
   if (!user) return null;
 
   return (
-    <div
+   <div
+  onClick={onClose}
+  className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+>
+  <div
+    onClick={(e) => e.stopPropagation()}
+    className="bg-white rounded-lg max-w-md w-full p-6 shadow-lg relative"
+  >
+    {/* Botón cerrar en esquina superior derecha */}
+    <button
       onClick={onClose}
-      className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+      className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-2xl leading-none"
+      aria-label="Cerrar modal"
     >
-      <div
-        onClick={(e) => e.stopPropagation()}
-        className="bg-white rounded-lg max-w-md w-full p-6 shadow-lg"
-      >
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="text-2xl font-bold">
-            {user.firstName} {user.lastName}
-          </h2>
-          <button onClick={onClose} className="text-gray-600 hover:text-gray-900">
-            ✕
-          </button>
-        </div>
+      ✕
+    </button>
 
-  <Image
-  src={user.imageUrl}
-  alt={`${user.firstName} ${user.lastName}`}
-  width={300} // Mantiene buena calidad de carga, Next optimiza esto
-  height={300}
-  className="object-cover rounded mb-4 mx-auto max-w-[200px] w-full h-auto"
-/>
+    {/* Título centrado */}
+    <h2 className="text-2xl font-bold truncate text-center mb-4">
+      {user.firstName} {user.lastName}
+    </h2>
 
-        <p className="text-primary italic mb-2">{user.slogan}</p>
-        <p className="text-gray-700 mb-4">{user.descripcion}</p>
+    <Image
+      src={user.imageUrl}
+      alt={`${user.firstName} ${user.lastName}`}
+      width={300}
+      height={300}
+      className="object-cover rounded mb-4 mx-auto max-w-[200px] w-full h-auto"
+    />
 
-      </div>
-    </div>
+    <p className="text-primary italic mb-2 text-center">{user.slogan}</p>
+    <p className="text-gray-700 mb-4">{user.descripcion}</p>
+  </div>
+</div>
+
   );
 };
+
+
+
 
 export const TeamSection = () => {
     const [selectedUser, setSelectedUser] = useState<TeamProps | null>(null);
@@ -205,7 +222,7 @@ export const TeamSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold">The Company Dream Team</h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
         {teamList.map(
           (
             { imageUrl, firstName, lastName, positions, socialNetworks,slogan,descripcion },

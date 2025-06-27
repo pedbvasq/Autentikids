@@ -33,32 +33,24 @@ export const HeroSection = () => {
     <section className="container w-full">
       <div className="grid place-items-center max-w-screen-xl gap-8 mx-auto py-20 px-4">
         {/* Carrusel */}
-        <div className="relative w-full max-w-4xl mx-auto">
-          <div className="absolute top-2 -top-8 left-1/2 -translate-x-1/2 w-full h-24 md:h-40 bg-primary/30 rounded-full blur-3xl z-0"></div>
+    <div className="relative w-full max-w-md sm:max-w-2xl md:max-w-4xl mx-auto">
+  <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-full h-24 md:h-40 bg-primary/30 rounded-full blur-3xl z-0"></div>
 
-          <div
-            ref={(node) => {
-              sliderRef.current = node;
-              sliderInstanceRef(node);
-            }}
-            className="keen-slider rounded-xl overflow-hidden relative z-10"
-          >
-            {images.map((src, i) => (
-              <div
-                key={i}
-                className="keen-slider__slide flex items-center justify-center min-w-full"
-              >
-                <Image
-                  src={src}
-                  alt={`Slide ${i + 1}`}
-                  width={1200}
-                  height={500}
-                  className="rounded-xl object-cover w-full h-[300px] md:h-[400px] border border-secondary border-t-2 border-t-primary/30"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+  <div ref={(node) => { sliderRef.current = node; sliderInstanceRef(node); }} className="keen-slider rounded-xl overflow-hidden relative z-10">
+    {images.map((src, i) => (
+      <div key={i} className="keen-slider__slide flex items-center justify-center w-full">
+        <Image
+          src={src}
+          alt={`Slide ${i + 1}`}
+          width={1200}
+          height={400}
+          className="rounded-xl object-cover w-full h-[200px] sm:h-[300px] md:h-[400px] border border-secondary border-t-2 border-t-primary/30"
+          sizes="(max-width: 768px) 100vw, 1200px"
+        />
+      </div>
+    ))}
+  </div>
+</div>
 
         {/* Texto */}
         <div className="text-center space-y-8 px-4">
