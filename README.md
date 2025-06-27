@@ -1,56 +1,27 @@
-# Shadcn Landing Page Template
+# AutentiKids
 
-## <a href="https://ui.shadcn.com/" target="_blank">Shadcn</a> + <a href="https://nextjs.org/" target="_blank">Next.js</a> + <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a> + <a href="https://tailwindcss.com/" target="_blank">Tailwind</a>.
 
-### This is a project conversion <a href="https://github.com/leoMirandaa/shadcn-vue-landing-page" target="_blank">Shadcn-Vue</a> to NextJS
+![image](https://github.com/user-attachments/assets/1ca9864e-0daf-4dbc-a0ab-5635c776f1eb)
 
-![Alt text](./public/demo-img.jpg)
 
-## Sections
+# Landing Page - Centro Terapéutico AutentiKids
 
-- [x] Navbar
-- [x] Sidebar(mobile)
-- [x] Hero
-- [x] Sponsors
-- [x] Benefits
-- [x] Features
-- [x] Testimonials
-- [x] Team
-- [x] Community
-- [x] Contact
-- [x] Pricing
-- [x] Frequently Asked Questions(FAQ)
-- [x] Services
-- [x] Footer
+Este proyecto es una **Landing Page** desarrollada para el Centro Terapéutico Integral AutentiKids. Su objetivo es brindar información clara, generar confianza y facilitar el contacto de potenciales clientes que buscan bienestar emocional para niños, adolescentes y adultos.
 
-## Features
+La página destaca los servicios, beneficios y facilita la toma de contacto de manera rápida y eficiente.
 
-- [x] Fully Responsive Design
-- [x] User Friendly Navigation
-- [x] Dark Mode
+---
 
-## How to install
+## ✨ Tecnologías Utilizadas
 
-1. Clone this repositoy:
+- **Next.js 14** → Framework de React para desarrollo rápido, escalable y con optimización automática.
+- **TypeScript** → Tipado estático que mejora la calidad y mantenibilidad del código.
+- **Tailwind CSS** → Framework de estilos utilitario para diseño responsive y moderno.
+- **Shadcn/UI** → Librería de componentes UI elegante y accesible.
+- **Keen Slider** → Slider/carousel liviano y responsive para secciones dinámicas de imágenes.
+- **React Icons / Lucide Icons** → Íconos personalizables y ligeros.
+- **Next/Image** → Optimización automática de imágenes, para mayor rendimiento.
 
-```bash
-git clone https://github.com/nobruf/shadcn-landing-page.git
-```
+---
 
-2. Go into project
-
-```bash
-cd shadcn-landing-page
-```
-
-3. Install dependencies
-
-```bash
-npm install
-```
-
-4. Run project
-
-```bash
-npm run dev
-```
+---
